@@ -1,11 +1,17 @@
-# request_example
-本实例实现了虚拟 DOM 的基础操作： 
+# mvvm_example
+本实例通过实现以下 4 个步骤，来实现数据的双向绑定：
 
- ● 用 `JS` 对象模拟 `DOM` 树 — `element.js`
+1、实现一个监听器 `Observer` ，用来劫持并监听所有属性，如果属性发生变化，就通知订阅者；
 
- ● 比较两棵虚拟 `DOM` 树的差异 — `diff.js`
+2、实现一个订阅器 `Dep`，用来收集订阅者，对监听器 `Observer` 和 订阅者 `Watcher` 进行统一管理；
 
- ● 将两个虚拟 `DOM` 对象的差异应用到真正的 `DOM` 树 — `patch.js`
+3、实现一个订阅者 `Watcher`，可以收到属性的变化通知并执行相应的方法，从而更新视图；
+
+4、实现一个解析器 `Compile`，可以解析每个节点的相关指令，对模板数据和订阅器进行初始化。‘
+
+相关结构图表示如下：
+
+![3.png](https://github.com/fengshi123/blog/blob/master/assets/mvvm/3.png?raw=true) 
 
 ## 构建步骤
 
@@ -20,3 +26,7 @@
 - 然后会生成 js 压缩文件，放在目录 /dist 下面
 
 3、运行示例，可以用浏览器打开 /example/index.html 运行示例页面。
+
+4、实例展示如下：
+
+![1.gif](https://github.com/fengshi123/blog/blob/master/assets/mvvm/1.gif?raw=true) 
