@@ -1,0 +1,21 @@
+{
+  "name": "virtual-dom-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "example": "example",
+    "lib": "lib"
+  },
+  "scripts": {
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "list-diff2": "^0.1.4",
+    "webpack": "^4.35.3",
+    "webpack-cli": "^3.3.6"
+  }
+}
